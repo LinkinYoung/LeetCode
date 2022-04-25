@@ -6,6 +6,7 @@
 
 ### 关于本仓库
 - <doc:Usage>
+- <doc:BuildWebsite>
 
 ### 题目
 - ``LeetCode36``
