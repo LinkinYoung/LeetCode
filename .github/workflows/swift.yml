@@ -1,0 +1,17 @@
+name: Swift
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-documentation:
+    name: 构建文档网站
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: fwal/setup-swift@v1
+    - name: Build
+      run: ./BuildTools/build-doc.sh
