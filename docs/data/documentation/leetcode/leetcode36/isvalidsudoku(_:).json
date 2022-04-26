@@ -9,17 +9,17 @@
     "paths" : [
       [
         "doc:\/\/LeetCode\/documentation\/LeetCode",
-        "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36"
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36\/isValidSudoku(_:)"
+    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36\/isValidSudoku(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:8LeetCode10Solution36C13isValidSudokuySbSaySaySJGGF",
+    "externalID" : "s:8LeetCode0A6Code36C13isValidSudokuySbSaySaySJGGF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -167,7 +167,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/leetcode\/solution36\/isvalidsudoku(_:)"
+        "\/documentation\/leetcode\/leetcode36\/isvalidsudoku(_:)"
       ],
       "traits" : [
         {
@@ -192,10 +192,10 @@
   "type" : "topic",
   "url" : "\/documentation\/leetcode"
 },
-"doc://LeetCode/documentation/LeetCode/Solution36": {
+"doc://LeetCode/documentation/LeetCode/LeetCode36": {
   "abstract" : [
     {
-      "text" : "有效的数独",
+      "text" : "【中等】有效的数独",
       "type" : "text"
     }
   ],
@@ -210,23 +210,23 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Solution36"
+      "text" : "LeetCode36"
     }
   ],
-  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36",
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Solution36"
+      "text" : "LeetCode36"
     }
   ],
   "role" : "symbol",
-  "title" : "Solution36",
+  "title" : "LeetCode36",
   "type" : "topic",
-  "url" : "\/documentation\/leetcode\/solution36"
+  "url" : "\/documentation\/leetcode\/leetcode36"
 },
-"doc://LeetCode/documentation/LeetCode/Solution36/isValidSudoku(_:)": {
+"doc://LeetCode/documentation/LeetCode/LeetCode36/isValidSudoku(_:)": {
   "abstract" : [
     {
       "text" : "九宫格内遍历时使用除法和取余即可计算坐标。",
@@ -265,12 +265,12 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36\/isValidSudoku(_:)",
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36\/isValidSudoku(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "isValidSudoku(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/leetcode\/solution36\/isvalidsudoku(_:)"
+  "url" : "\/documentation\/leetcode\/leetcode36\/isvalidsudoku(_:)"
 }
 }
 }

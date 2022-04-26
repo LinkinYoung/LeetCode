@@ -144,9 +144,16 @@
         }
       ],
       "identifiers" : [
-        "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36"
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36"
       ],
       "title" : "题目"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141",
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142"
+      ],
+      "title" : "链表"
     }
   ],
   "variants" : [
@@ -191,10 +198,10 @@
   "type" : "topic",
   "url" : "\/documentation\/leetcode\/automatically-build-website"
 },
-"doc://LeetCode/documentation/LeetCode/Solution36": {
+"doc://LeetCode/documentation/LeetCode/LeetCode141": {
   "abstract" : [
     {
-      "text" : "有效的数独",
+      "text" : "【简单】环形链表 I",
       "type" : "text"
     }
   ],
@@ -209,21 +216,89 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Solution36"
+      "text" : "LeetCode141"
     }
   ],
-  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36",
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Solution36"
+      "text" : "LeetCode141"
     }
   ],
   "role" : "symbol",
-  "title" : "Solution36",
+  "title" : "LeetCode141",
   "type" : "topic",
-  "url" : "\/documentation\/leetcode\/solution36"
+  "url" : "\/documentation\/leetcode\/leetcode141"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode142": {
+  "abstract" : [
+    {
+      "text" : "【中等】环形链表 II",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode142"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode142"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LeetCode142",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode142"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode36": {
+  "abstract" : [
+    {
+      "text" : "【中等】有效的数独",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode36"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode36"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LeetCode36",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode36"
 },
 "doc://LeetCode/documentation/LeetCode/Usage": {
   "abstract" : [

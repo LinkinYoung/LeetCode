@@ -1,0 +1,238 @@
+{
+  "abstract" : [
+    {
+      "text" : "No overview available.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/LeetCode\/documentation\/LeetCode",
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141",
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141\/ListNode"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141\/ListNode\/init(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:8LeetCode0A7Code141C8ListNodeCyAESicfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "LeetCode"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "val"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/leetcode\/leetcode141\/listnode\/init(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://LeetCode/documentation/LeetCode": {
+  "abstract" : [
+    {
+      "text" : "我的 LeetCode 题目解法和笔记。",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "LeetCode",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode141": {
+  "abstract" : [
+    {
+      "text" : "【简单】环形链表 I",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode141"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode141"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LeetCode141",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode141"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode141/ListNode": {
+  "abstract" : [
+    {
+      "text" : "给定的单链表定义",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ListNode"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141\/ListNode",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ListNode"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LeetCode141.ListNode",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode141\/listnode"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode141/ListNode/init(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141\/ListNode\/init(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode141\/listnode\/init(_:)"
+}
+}
+}

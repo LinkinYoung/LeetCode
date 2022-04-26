@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "有效的数独",
+      "text" : "【中等】有效的数独",
       "type" : "text"
     }
   ],
@@ -14,11 +14,11 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36"
+    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:8LeetCode10Solution36C",
+    "externalID" : "s:8LeetCode0A6Code36C",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -30,7 +30,7 @@
       },
       {
         "kind" : "identifier",
-        "text" : "Solution36"
+        "text" : "LeetCode36"
       }
     ],
     "modules" : [
@@ -41,13 +41,13 @@
     "navigatorTitle" : [
       {
         "kind" : "identifier",
-        "text" : "Solution36"
+        "text" : "LeetCode36"
       }
     ],
     "role" : "symbol",
     "roleHeading" : "Class",
     "symbolKind" : "class",
-    "title" : "Solution36"
+    "title" : "LeetCode36"
   },
   "primaryContentSections" : [
     {
@@ -70,7 +70,7 @@
             },
             {
               "kind" : "identifier",
-              "text" : "Solution36"
+              "text" : "LeetCode36"
             }
           ]
         }
@@ -429,7 +429,7 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36\/isValidSudoku(_:)"
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36\/isValidSudoku(_:)"
       ],
       "title" : "Instance Methods"
     }
@@ -437,7 +437,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/leetcode\/solution36"
+        "\/documentation\/leetcode\/leetcode36"
       ],
       "traits" : [
         {
@@ -476,10 +476,10 @@
   "type" : "topic",
   "url" : "\/documentation\/leetcode"
 },
-"doc://LeetCode/documentation/LeetCode/Solution36": {
+"doc://LeetCode/documentation/LeetCode/LeetCode36": {
   "abstract" : [
     {
-      "text" : "有效的数独",
+      "text" : "【中等】有效的数独",
       "type" : "text"
     }
   ],
@@ -494,23 +494,23 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Solution36"
+      "text" : "LeetCode36"
     }
   ],
-  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36",
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Solution36"
+      "text" : "LeetCode36"
     }
   ],
   "role" : "symbol",
-  "title" : "Solution36",
+  "title" : "LeetCode36",
   "type" : "topic",
-  "url" : "\/documentation\/leetcode\/solution36"
+  "url" : "\/documentation\/leetcode\/leetcode36"
 },
-"doc://LeetCode/documentation/LeetCode/Solution36/isValidSudoku(_:)": {
+"doc://LeetCode/documentation/LeetCode/LeetCode36/isValidSudoku(_:)": {
   "abstract" : [
     {
       "text" : "九宫格内遍历时使用除法和取余即可计算坐标。",
@@ -549,12 +549,12 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36\/isValidSudoku(_:)",
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode36\/isValidSudoku(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "isValidSudoku(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/leetcode\/solution36\/isvalidsudoku(_:)"
+  "url" : "\/documentation\/leetcode\/leetcode36\/isvalidsudoku(_:)"
 }
 }
 }

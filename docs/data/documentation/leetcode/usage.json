@@ -59,9 +59,8 @@
               "type" : "text"
             },
             {
-              "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36",
-              "isActive" : true,
-              "type" : "reference"
+              "code" : "Solution36",
+              "type" : "codeVoice"
             },
             {
               "text" : "。",
@@ -331,40 +330,6 @@
   "title" : "使用 GitHub Workflow 自动构建和部署文档网站",
   "type" : "topic",
   "url" : "\/documentation\/leetcode\/automatically-build-website"
-},
-"doc://LeetCode/documentation/LeetCode/Solution36": {
-  "abstract" : [
-    {
-      "text" : "有效的数独",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "class"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Solution36"
-    }
-  ],
-  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "Solution36"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "Solution36",
-  "type" : "topic",
-  "url" : "\/documentation\/leetcode\/solution36"
 }
 }
 }

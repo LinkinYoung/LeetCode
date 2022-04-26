@@ -1,0 +1,275 @@
+{
+  "abstract" : [
+    {
+      "text" : "No overview available.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/LeetCode\/documentation\/LeetCode",
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142",
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142\/ListNode"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142\/ListNode\/next"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:8LeetCode0A7Code142C8ListNodeC4nextAESgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "next"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8LeetCode0A7Code142C",
+        "text" : "LeetCode142"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8LeetCode0A7Code142C8ListNodeC",
+        "text" : "ListNode"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "LeetCode"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "next"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "next"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:8LeetCode0A7Code142C",
+              "text" : "LeetCode142"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142\/ListNode",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:8LeetCode0A7Code142C8ListNodeC",
+              "text" : "ListNode"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/leetcode\/leetcode142\/listnode\/next"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://LeetCode/documentation/LeetCode": {
+  "abstract" : [
+    {
+      "text" : "我的 LeetCode 题目解法和笔记。",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "LeetCode",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode142": {
+  "abstract" : [
+    {
+      "text" : "【中等】环形链表 II",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode142"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode142"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LeetCode142",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode142"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode142/ListNode": {
+  "abstract" : [
+    {
+      "text" : "给定的单链表定义",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ListNode"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142\/ListNode",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ListNode"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LeetCode142.ListNode",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode142\/listnode"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode142/ListNode/next": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "next"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8LeetCode0A7Code142C",
+      "text" : "LeetCode142"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8LeetCode0A7Code142C8ListNodeC",
+      "text" : "ListNode"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142\/ListNode\/next",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "next",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode142\/listnode\/next"
+}
+}
+}
