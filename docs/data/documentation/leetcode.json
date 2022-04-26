@@ -1,0 +1,237 @@
+{
+  "abstract" : [
+    {
+      "text" : "我的 LeetCode 题目解法和笔记。",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "LeetCode",
+    "modules" : [
+      {
+        "name" : "LeetCode"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "LeetCode"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "修订历史",
+          "level" : 2,
+          "text" : "修订历史",
+          "type" : "heading"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "时间",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "修订",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "2022-04-26T11:28:04+08:00",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "改为使用 Swift Package 组织代码。",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "2022-04-25T17:00:00+08:00",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "创建。使用命令行工具项目组织代码。",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/Usage",
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/BuildWebsite"
+      ],
+      "title" : "关于本仓库"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36"
+      ],
+      "title" : "题目"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/leetcode"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://LeetCode/documentation/LeetCode": {
+  "abstract" : [
+    {
+      "text" : "我的 LeetCode 题目解法和笔记。",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "LeetCode",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode"
+},
+"doc://LeetCode/documentation/LeetCode/BuildWebsite": {
+  "abstract" : [
+    {
+      "text" : "介绍我是如何使用 Swift DocC 把代码中的注释编译成这个网站的。",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/BuildWebsite",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "关于生成的网站",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/buildwebsite"
+},
+"doc://LeetCode/documentation/LeetCode/Solution36": {
+  "abstract" : [
+    {
+      "text" : "有效的数独",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Solution36"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Solution36"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Solution36",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/solution36"
+},
+"doc://LeetCode/documentation/LeetCode/Usage": {
+  "abstract" : [
+    {
+      "text" : "创建题目、测试题解。",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Usage",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "使用说明",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/usage"
+}
+}
+}

@@ -1,0 +1,276 @@
+{
+  "abstract" : [
+    {
+      "text" : "九宫格内遍历时使用除法和取余即可计算坐标。",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/LeetCode\/documentation\/LeetCode",
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36\/isValidSudoku(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:8LeetCode10Solution36C13isValidSudokuySbSaySaySJGGF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "isValidSudoku"
+      },
+      {
+        "kind" : "text",
+        "text" : "([["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SJ",
+        "text" : "Character"
+      },
+      {
+        "kind" : "text",
+        "text" : "]]) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "LeetCode"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "isValidSudoku(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "isValidSudoku"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "board"
+            },
+            {
+              "kind" : "text",
+              "text" : ": [["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SJ",
+              "text" : "Character"
+            },
+            {
+              "kind" : "text",
+              "text" : "]]) -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "code" : [
+            "for i in 0..<9 {",
+            "    var nineSet = SudokuSet()",
+            "    let topLeftRow = (i \/ 3) * 3",
+            "    let topLeftCol = (i % 3) * 3",
+            "    for j in 0..<9 {",
+            "        let dRow = j \/ 3",
+            "        let dCol = j % 3",
+            "        let row = dRow + topLeftRow",
+            "        let col = dCol + topLeftCol",
+            "        if nineSet.addAndTest(board[row][col]) {",
+            "            return false",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/leetcode\/solution36\/isvalidsudoku(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://LeetCode/documentation/LeetCode": {
+  "abstract" : [
+    {
+      "text" : "我的 LeetCode 题目解法和笔记。",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "LeetCode",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode"
+},
+"doc://LeetCode/documentation/LeetCode/Solution36": {
+  "abstract" : [
+    {
+      "text" : "有效的数独",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Solution36"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Solution36"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Solution36",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/solution36"
+},
+"doc://LeetCode/documentation/LeetCode/Solution36/isValidSudoku(_:)": {
+  "abstract" : [
+    {
+      "text" : "九宫格内遍历时使用除法和取余即可计算坐标。",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isValidSudoku"
+    },
+    {
+      "kind" : "text",
+      "text" : "([["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SJ",
+      "text" : "Character"
+    },
+    {
+      "kind" : "text",
+      "text" : "]]) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Solution36\/isValidSudoku(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isValidSudoku(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/solution36\/isvalidsudoku(_:)"
+}
+}
+}
