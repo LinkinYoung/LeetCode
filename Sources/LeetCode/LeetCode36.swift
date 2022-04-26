@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// 有效的数独
+/// 【中等】有效的数独
 ///
 /// 请你判断一个 9 x 9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。
 ///
@@ -66,7 +66,7 @@ import Foundation
 /// > * board.length == 9
 /// > * `board[i].length == 9`
 /// > * `board[i][j]` 是一位数字(1~9)或者“`.`”
-public class Solution36 {
+public class LeetCode36 {
     /// 表示一行、一列或者一个九宫格内已有的数字集合。
     private struct SudokuSet {
         private var flag = [Bool](repeating: false, count: 9)

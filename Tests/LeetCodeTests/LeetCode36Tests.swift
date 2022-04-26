@@ -21,7 +21,7 @@ class Solution36Tests: XCTestCase {
                                         ,[".","6",".",".",".",".","2","8","."]
                                         ,[".",".",".","4","1","9",".",".","5"]
                                         ,[".",".",".",".","8",".",".","7","9"]]
-            XCTAssertTrue(Solution36().isValidSudoku(board), "答案错误。")
+            XCTAssertTrue(LeetCode36().isValidSudoku(board), "答案错误。")
         }
     }
     
@@ -36,7 +36,7 @@ class Solution36Tests: XCTestCase {
                                         ,[".","6",".",".",".",".","2","8","."]
                                         ,[".",".",".","4","1","9",".",".","5"]
                                         ,[".",".",".",".","8",".",".","7","9"]]
-            XCTAssertFalse(Solution36().isValidSudoku(board), "答案错误。")
+            XCTAssertFalse(LeetCode36().isValidSudoku(board), "答案错误。")
         }
     }
 
