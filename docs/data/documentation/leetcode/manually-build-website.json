@@ -8,13 +8,14 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/LeetCode\/documentation\/LeetCode"
+        "doc:\/\/LeetCode\/documentation\/LeetCode",
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/Automatically-Build-Website"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/BuildWebsite"
+    "url" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Manually-Build-Website"
   },
   "kind" : "article",
   "metadata" : {
@@ -25,7 +26,7 @@
     ],
     "role" : "article",
     "roleHeading" : "Article",
-    "title" : "关于生成的网站"
+    "title" : "手动导出并转换文档网站"
   },
   "primaryContentSections" : [
     {
@@ -461,6 +462,90 @@
             }
           ],
           "type" : "paragraph"
+        },
+        {
+          "anchor" : "修订历史",
+          "level" : 2,
+          "text" : "修订历史",
+          "type" : "heading"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "时间",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "修订",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "2022-04-26T15:06:16+08:00",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "改为《手动导出和转换文档网站》。",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "2022-04-25T17:00:00+08:00",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "创建。使用命令行工具项目组织代码。",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
         }
       ],
       "kind" : "content"
@@ -474,19 +559,10 @@
   "sections" : [
 
   ],
-  "seeAlsoSections" : [
-    {
-      "generated" : true,
-      "identifiers" : [
-        "doc:\/\/LeetCode\/documentation\/LeetCode\/Usage"
-      ],
-      "title" : "关于本仓库"
-    }
-  ],
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/leetcode\/buildwebsite"
+        "\/documentation\/leetcode\/manually-build-website"
       ],
       "traits" : [
         {
@@ -511,19 +587,19 @@
   "type" : "topic",
   "url" : "\/documentation\/leetcode"
 },
-"doc://LeetCode/documentation/LeetCode/Usage": {
+"doc://LeetCode/documentation/LeetCode/Automatically-Build-Website": {
   "abstract" : [
     {
-      "text" : "创建题目、测试题解。",
+      "text" : "介绍我是如何使用 GitHub Workflow 和 Swift DocC Plugin 把代码中的注释编译成这个网站的。",
       "type" : "text"
     }
   ],
-  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Usage",
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Automatically-Build-Website",
   "kind" : "article",
-  "role" : "article",
-  "title" : "使用说明",
+  "role" : "collectionGroup",
+  "title" : "使用 GitHub Workflow 自动构建和部署文档网站",
   "type" : "topic",
-  "url" : "\/documentation\/leetcode\/usage"
+  "url" : "\/documentation\/leetcode\/automatically-build-website"
 },
 "https://github.com/apple/swift-docc": {
   "identifier" : "https:\/\/github.com\/apple\/swift-docc",

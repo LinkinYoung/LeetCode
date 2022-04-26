@@ -223,8 +223,8 @@
                 {
                   "inlineContent" : [
                     {
-                      "text" : "2022-04-26T11:28:04+08:00",
-                      "type" : "text"
+                      "code" : "2022-04-26T11:28:04+08:00",
+                      "type" : "codeVoice"
                     }
                   ],
                   "type" : "paragraph"
@@ -247,8 +247,8 @@
                 {
                   "inlineContent" : [
                     {
-                      "text" : "2022-04-25T19:00:00+08:00",
-                      "type" : "text"
+                      "code" : "2022-04-25T19:00:00+08:00",
+                      "type" : "codeVoice"
                     }
                   ],
                   "type" : "paragraph"
@@ -285,7 +285,7 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/LeetCode\/documentation\/LeetCode\/BuildWebsite"
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/Automatically-Build-Website"
       ],
       "title" : "关于本仓库"
     }
@@ -318,19 +318,19 @@
   "type" : "topic",
   "url" : "\/documentation\/leetcode"
 },
-"doc://LeetCode/documentation/LeetCode/BuildWebsite": {
+"doc://LeetCode/documentation/LeetCode/Automatically-Build-Website": {
   "abstract" : [
     {
-      "text" : "介绍我是如何使用 Swift DocC 把代码中的注释编译成这个网站的。",
+      "text" : "介绍我是如何使用 GitHub Workflow 和 Swift DocC Plugin 把代码中的注释编译成这个网站的。",
       "type" : "text"
     }
   ],
-  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/BuildWebsite",
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/Automatically-Build-Website",
   "kind" : "article",
-  "role" : "article",
-  "title" : "关于生成的网站",
+  "role" : "collectionGroup",
+  "title" : "使用 GitHub Workflow 自动构建和部署文档网站",
   "type" : "topic",
-  "url" : "\/documentation\/leetcode\/buildwebsite"
+  "url" : "\/documentation\/leetcode\/automatically-build-website"
 },
 "doc://LeetCode/documentation/LeetCode/Solution36": {
   "abstract" : [
