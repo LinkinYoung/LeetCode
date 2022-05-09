@@ -150,6 +150,12 @@
     },
     {
       "identifiers" : [
+        "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode189"
+      ],
+      "title" : "数组"
+    },
+    {
+      "identifiers" : [
         "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode141",
         "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode142"
       ],
@@ -265,6 +271,40 @@
   "title" : "LeetCode142",
   "type" : "topic",
   "url" : "\/documentation\/leetcode\/leetcode142"
+},
+"doc://LeetCode/documentation/LeetCode/LeetCode189": {
+  "abstract" : [
+    {
+      "text" : "【中等】轮转数组",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode189"
+    }
+  ],
+  "identifier" : "doc:\/\/LeetCode\/documentation\/LeetCode\/LeetCode189",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LeetCode189"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LeetCode189",
+  "type" : "topic",
+  "url" : "\/documentation\/leetcode\/leetcode189"
 },
 "doc://LeetCode/documentation/LeetCode/LeetCode36": {
   "abstract" : [
