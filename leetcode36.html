@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="color-scheme" content="dark light">
+        <title>36【中等】有效的数独  - LeetCode 笔记</title>
+        <link rel="apple-touch-icon" href='./apple-touch-icon.png'>
+        <link rel="shortcut icon" href='./icon.png'>
+        <link rel="mask-icon" href='./mask-icon.svg' color="#4682b4">
+        <meta name="description" content="判断一个 9x9 的数独是否有效。只要每一行、每一列、每个九宫格内数字 1～9 均只出现了一次即为有效。">
+        <meta name="author" content="杨林青">
+        <link rel="stylesheet" media="(prefers-color-scheme: light)" href='./chroma/syntax.css'>
+        <link rel="stylesheet" media="(prefers-color-scheme: dark)" href='./chroma/dracula.css'>
+        <link rel="stylesheet" href='./style.css'>
+        <script defer src='./fontawesome/all.min.js'></script>
+    </head>
+    <body>
+        <header>
+            <kb:title>
+                <aside>卡片</aside>
+                <b>36【中等】有效的数独 </b>
+            </kb:title>
+        </header>
+        <main>
+            <kb:title>
+                <aside>卡片</aside>
+                <h1>36【中等】有效的数独 </h1>
+            </kb:title>
+            <kb:description>判断一个 9x9 的数独是否有效。只要每一行、每一列、每个九宫格内数字 1～9 均只出现了一次即为有效。</kb:description>
+            <kb:content><p>题目链接: <a href="https://leetcode.cn/problems/valid-sudoku/">https://leetcode.cn/problems/valid-sudoku/</a></p>
+<h2 id="思路">思路</h2>
+<p>　　判断一个集合内是否已有某个数字比较简单。我直接使用一个布尔型数组实现。难点在于在遍历九宫格。这里我使用整除和取余计算坐标。首先将九个九宫格从左到右，从上到下按照 0～9 编号，然后每个九宫格内的格子按 0～9 的顺序编号。如下：</p>
+<pre tabindex="0"><code>1 2 3
+4 5 6
+7 8 9
+</code></pre><p>外层循环遍历 9 个九宫格，内层循环遍历九宫格内 9 个格子。为了计算清晰，这里均计算左上角的下标。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">9</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">nineSet</span> <span class="p">=</span> <span class="n">SudokuSet</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">topLeftRow</span> <span class="p">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">topLeftCol</span> <span class="p">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">9</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">dRow</span> <span class="p">=</span> <span class="n">j</span> <span class="o">/</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">dCol</span> <span class="p">=</span> <span class="n">j</span> <span class="o">%</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">row</span> <span class="p">=</span> <span class="n">dRow</span> <span class="o">+</span> <span class="n">topLeftRow</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">col</span> <span class="p">=</span> <span class="n">dCol</span> <span class="o">+</span> <span class="n">topLeftCol</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">nineSet</span><span class="p">.</span><span class="n">addAndTest</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>　　代码中的 <code>SodokuSet</code> 结构体实现如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">/// 表示一行、一列或者一个九宫格内已有的数字集合。</span>
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">struct</span> <span class="nc">SudokuSet</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">flag</span> <span class="p">=</span> <span class="p">[</span><span class="nb">Bool</span><span class="p">](</span><span class="n">repeating</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="bp">count</span><span class="p">:</span> <span class="mi">9</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">/// 向集合添加数字，并检测集合中是否已经存在该数字。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">/// - Parameter num: 要添加的数字。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">/// - Returns: 集合中是否存在该数字。</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kr">mutating</span> <span class="kd">func</span> <span class="nf">addAndTest</span><span class="p">(</span><span class="kc">_</span> <span class="n">num</span><span class="p">:</span> <span class="nb">Character</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span> <span class="n">num</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="s">&#34;1&#34;</span><span class="p">,</span> <span class="s">&#34;2&#34;</span><span class="p">,</span> <span class="s">&#34;3&#34;</span><span class="p">,</span> <span class="s">&#34;4&#34;</span><span class="p">,</span> <span class="s">&#34;5&#34;</span><span class="p">,</span> <span class="s">&#34;6&#34;</span><span class="p">,</span> <span class="s">&#34;7&#34;</span><span class="p">,</span> <span class="s">&#34;8&#34;</span><span class="p">,</span> <span class="s">&#34;9&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">n</span> <span class="p">=</span> <span class="n">num</span><span class="p">.</span><span class="n">asciiValue</span><span class="p">!</span> <span class="o">-</span> <span class="nb">Character</span><span class="p">(</span><span class="s">&#34;1&#34;</span><span class="p">).</span><span class="n">asciiValue</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">flag</span><span class="p">[</span><span class="nb">Int</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">flag</span><span class="p">[</span><span class="nb">Int</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>　　</p>
+<h2 id="完整代码">完整代码</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isValidSudoku</span><span class="p">(</span><span class="kc">_</span> <span class="n">board</span><span class="p">:</span> <span class="p">[[</span><span class="nb">Character</span><span class="p">]])</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">9</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">rowSudokuSet</span> <span class="p">=</span> <span class="n">SudokuSet</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">columnSudokuSet</span> <span class="p">=</span> <span class="n">SudokuSet</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">9</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">rowSudokuSet</span><span class="p">.</span><span class="n">addAndTest</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">columnSudokuSet</span><span class="p">.</span><span class="n">addAndTest</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">9</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">nineSet</span> <span class="p">=</span> <span class="n">SudokuSet</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">topLeftRow</span> <span class="p">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">topLeftCol</span> <span class="p">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">9</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">dRow</span> <span class="p">=</span> <span class="n">j</span> <span class="o">/</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">dCol</span> <span class="p">=</span> <span class="n">j</span> <span class="o">%</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">row</span> <span class="p">=</span> <span class="n">dRow</span> <span class="o">+</span> <span class="n">topLeftRow</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">col</span> <span class="p">=</span> <span class="n">dCol</span> <span class="o">+</span> <span class="n">topLeftCol</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">nineSet</span><span class="p">.</span><span class="n">addAndTest</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="修订记录">修订记录</h2>
+<h3 id="2022-05-10t1619270800">2022-05-10T16:19:27+08:00</h3>
+<ul>
+<li>创建。</li>
+</ul>
+</kb:content>
+        </main>
+        <footer>
+        <section class="info"><p>© 2022 杨林青</p></section>
+        <script src='./title.js'></script>
+        <script src='./mermaid/min.js'></script>
+        <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose', theme: 'neutral'});</script>
+        
+            <script src='./completeTOC.js'></script>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LeetCode 笔记</title>
+    <link>https://example.org/</link>
+    <description>Recent content on LeetCode 笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 May 2022 14:59:38 +0800</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>189【中等】轮转数组</title>
+      <link>https://example.org/leetcode189.html</link>
+      <pubDate>Tue, 10 May 2022 16:42:53 +0800</pubDate>
+      
+      <guid>https://example.org/leetcode189.html</guid>
+      <description>题目链接: https://leetcode.cn/problems/rotate-array/
+思路 　把 0 处的数移到 k 处，然后将 k 处的数移到 2k 处，循环。当 k 与 nums.count 的最大公约数为 1 时，会遍历数组的每一个元素。当 k 与 nums.count 的最大公约数为 n 时，设 k = np， nums.count = nq。经过观察可见从任意一点开始，每次移动 k，可以遍历到间隔为 n 的所有元素。因此，只需要从 0 到 p-1 开始反复遍历即可。
+完整代码 /// 使用辗转相除法求最大公约数。 func gcd(_ a: Int, _ b: Int) -&amp;gt; Int { var m = a var n = b var r = 0 while n &amp;gt; 0 { r = m % n m = n n = r } return m } func rotate(_ nums: inout [Int], _ k: Int) { if k == 0 { return } let n = gcd(nums.</description>
+    </item>
+    
+    <item>
+      <title>141【简单】环形链表 I</title>
+      <link>https://example.org/leetcode141.html</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://example.org/leetcode141.html</guid>
+      <description>题目链接: https://leetcode-cn.com/problems/linked-list-cycle/
+思路 　使用快慢指针判断是否有环。使用一个快指针，每次前进两个节点；一个慢指针，一次前进一个节点。两个指针相遇说明链表有环，快指针走到链表尾部说明链表无环。
+完整代码 func hasCycle(_ head: ListNode?) -&amp;gt; Bool { if head == nil { return false } var fast = head var slow = head while fast?.next?.next != nil { fast = fast?.next?.next slow = slow?.next if fast === slow { return true } } return false } 修订记录 2022-05-10T16:42:40+08:00  创建。  </description>
+    </item>
+    
+    <item>
+      <title>142【中等】环形链表 II</title>
+      <link>https://example.org/leetcode142.html</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://example.org/leetcode142.html</guid>
+      <description>题目链接: https://leetcode-cn.com/problems/linked-list-cycle-ii/
+思路 　使用快慢指针判断是否有环，见《141 环形链表 I》。判断有环后有一个结论：当快慢指针第一次相遇后，从链表头部再创建一个慢指针。两个慢指针最终会在入环节点相遇。证明见《代码随想录》的《环形链表 II》。
+完整代码 func detectCycle(_ head: ListNode?) -&amp;gt; ListNode? { if head == nil { return nil } var fast = head var slow = head while fast?.next?.next != nil { fast = fast?.next?.next slow = slow?.next if fast === slow { var slow2 = head while slow !== slow2 { slow = slow?.next slow2 = slow2?.next } return slow2 } } return nil } 修订记录 2022-05-10T16:42:47+08:00  创建。  </description>
+    </item>
+    
+    <item>
+      <title>36【中等】有效的数独 </title>
+      <link>https://example.org/leetcode36.html</link>
+      <pubDate>Mon, 25 Apr 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://example.org/leetcode36.html</guid>
+      <description>题目链接: https://leetcode.cn/problems/valid-sudoku/
+思路 　判断一个集合内是否已有某个数字比较简单。我直接使用一个布尔型数组实现。难点在于在遍历九宫格。这里我使用整除和取余计算坐标。首先将九个九宫格从左到右，从上到下按照 0～9 编号，然后每个九宫格内的格子按 0～9 的顺序编号。如下：
+1 2 3 4 5 6 7 8 9 外层循环遍历 9 个九宫格，内层循环遍历九宫格内 9 个格子。为了计算清晰，这里均计算左上角的下标。
+for i in 0..&amp;lt;9 { var nineSet = SudokuSet() let topLeftRow = (i / 3) * 3 let topLeftCol = (i % 3) * 3 for j in 0..&amp;lt;9 { let dRow = j / 3 let dCol = j % 3 let row = dRow + topLeftRow let col = dCol + topLeftCol if nineSet.</description>
+    </item>
+    
+  </channel>
+</rss>

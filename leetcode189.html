@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="color-scheme" content="dark light">
+        <title>189【中等】轮转数组 - LeetCode 笔记</title>
+        <link rel="apple-touch-icon" href='./apple-touch-icon.png'>
+        <link rel="shortcut icon" href='./icon.png'>
+        <link rel="mask-icon" href='./mask-icon.svg' color="#4682b4">
+        <meta name="description" content="将数组原地向右移动 k 个位置。k 是非负数。">
+        <meta name="author" content="杨林青">
+        <link rel="stylesheet" media="(prefers-color-scheme: light)" href='./chroma/syntax.css'>
+        <link rel="stylesheet" media="(prefers-color-scheme: dark)" href='./chroma/dracula.css'>
+        <link rel="stylesheet" href='./style.css'>
+        <script defer src='./fontawesome/all.min.js'></script>
+    </head>
+    <body>
+        <header>
+            <kb:title>
+                <aside>卡片</aside>
+                <b>189【中等】轮转数组</b>
+            </kb:title>
+        </header>
+        <main>
+            <kb:title>
+                <aside>卡片</aside>
+                <h1>189【中等】轮转数组</h1>
+            </kb:title>
+            <kb:description>将数组原地向右移动 k 个位置。k 是非负数。</kb:description>
+            <kb:content><p>题目链接: <a href="https://leetcode.cn/problems/rotate-array/">https://leetcode.cn/problems/rotate-array/</a></p>
+<h2 id="思路">思路</h2>
+<p>　　把 0 处的数移到 k 处，然后将 k 处的数移到 2k 处，循环。当 k 与 <code>nums.count</code> 的最大公约数为 1 时，会遍历数组的每一个元素。当 k 与 <code>nums.count</code> 的最大公约数为 n 时，设 k = np， nums.count = nq。经过观察可见从任意一点开始，每次移动 k，可以遍历到间隔为 n 的所有元素。因此，只需要从 0 到 p-1 开始反复遍历即可。</p>
+<h2 id="完整代码">完整代码</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">/// 使用辗转相除法求最大公约数。</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">gcd</span><span class="p">(</span><span class="kc">_</span> <span class="n">a</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="kc">_</span> <span class="n">b</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">m</span> <span class="p">=</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">n</span> <span class="p">=</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">r</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">r</span> <span class="p">=</span> <span class="n">m</span> <span class="o">%</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="p">=</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="p">=</span> <span class="n">r</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">m</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">rotate</span><span class="p">(</span><span class="kc">_</span> <span class="n">nums</span><span class="p">:</span> <span class="kr">inout</span> <span class="p">[</span><span class="nb">Int</span><span class="p">],</span> <span class="kc">_</span> <span class="n">k</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">k</span> <span class="p">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">n</span> <span class="p">=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="bp">count</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">count</span> <span class="p">=</span> <span class="n">nums</span><span class="p">.</span><span class="bp">count</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">i</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">current</span> <span class="p">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">next</span> <span class="p">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">k</span><span class="p">)</span> <span class="o">%</span> <span class="bp">count</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">currentVal</span> <span class="p">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">current</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">nextVal</span> <span class="p">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">next</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">next</span> <span class="o">!=</span> <span class="n">i</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">nums</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="p">=</span> <span class="n">currentVal</span>
+</span></span><span class="line"><span class="cl">            <span class="n">current</span> <span class="p">=</span> <span class="n">next</span>
+</span></span><span class="line"><span class="cl">            <span class="n">currentVal</span> <span class="p">=</span> <span class="n">nextVal</span>
+</span></span><span class="line"><span class="cl">            <span class="n">next</span> <span class="p">=</span> <span class="p">(</span><span class="n">next</span> <span class="o">+</span> <span class="n">k</span><span class="p">)</span> <span class="o">%</span> <span class="bp">count</span>
+</span></span><span class="line"><span class="cl">            <span class="n">nextVal</span> <span class="p">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">next</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="n">currentVal</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="修订记录">修订记录</h2>
+<h3 id="2022-05-10t1642530800">2022-05-10T16:42:53+08:00</h3>
+<ul>
+<li>创建。</li>
+</ul>
+</kb:content>
+        </main>
+        <footer>
+        <section class="info"><p>© 2022 杨林青</p></section>
+        <script src='./title.js'></script>
+        <script src='./mermaid/min.js'></script>
+        <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose', theme: 'neutral'});</script>
+        
+            <script src='./completeTOC.js'></script>
+        </footer>
+    </body>
+</html>

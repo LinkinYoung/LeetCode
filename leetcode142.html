@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="color-scheme" content="dark light">
+        <title>142【中等】环形链表 II - LeetCode 笔记</title>
+        <link rel="apple-touch-icon" href='./apple-touch-icon.png'>
+        <link rel="shortcut icon" href='./icon.png'>
+        <link rel="mask-icon" href='./mask-icon.svg' color="#4682b4">
+        <meta name="description" content="给定一个单链表头节点，判断是否有环。如果有，返回链表开始入环的第一个节点。">
+        <meta name="author" content="杨林青">
+        <link rel="stylesheet" media="(prefers-color-scheme: light)" href='./chroma/syntax.css'>
+        <link rel="stylesheet" media="(prefers-color-scheme: dark)" href='./chroma/dracula.css'>
+        <link rel="stylesheet" href='./style.css'>
+        <script defer src='./fontawesome/all.min.js'></script>
+    </head>
+    <body>
+        <header>
+            <kb:title>
+                <aside>卡片</aside>
+                <b>142【中等】环形链表 II</b>
+            </kb:title>
+        </header>
+        <main>
+            <kb:title>
+                <aside>卡片</aside>
+                <h1>142【中等】环形链表 II</h1>
+            </kb:title>
+            <kb:description>给定一个单链表头节点，判断是否有环。如果有，返回链表开始入环的第一个节点。</kb:description>
+            <kb:content><p>题目链接: <a href="https://leetcode-cn.com/problems/linked-list-cycle-ii/">https://leetcode-cn.com/problems/linked-list-cycle-ii/</a></p>
+<h2 id="思路">思路</h2>
+<p>　　使用快慢指针判断是否有环，见《141 环形链表 I》。判断有环后有一个结论：当快慢指针第一次相遇后，从链表头部再创建一个慢指针。两个慢指针最终会在入环节点相遇。证明见《代码随想录》的《<a href="https://www.programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html">环形链表 II</a>》。</p>
+<h2 id="完整代码">完整代码</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">detectCycle</span><span class="p">(</span><span class="kc">_</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="n">ListNode</span><span class="p">?</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">head</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">fast</span> <span class="p">=</span> <span class="n">head</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">slow</span> <span class="p">=</span> <span class="n">head</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">fast</span><span class="p">?.</span><span class="n">next</span><span class="p">?.</span><span class="n">next</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fast</span> <span class="p">=</span> <span class="n">fast</span><span class="p">?.</span><span class="n">next</span><span class="p">?.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">        <span class="n">slow</span> <span class="p">=</span> <span class="n">slow</span><span class="p">?.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">fast</span> <span class="p">===</span> <span class="n">slow</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nv">slow2</span> <span class="p">=</span> <span class="n">head</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">slow</span> <span class="o">!==</span> <span class="n">slow2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">slow</span> <span class="p">=</span> <span class="n">slow</span><span class="p">?.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">                <span class="n">slow2</span> <span class="p">=</span> <span class="n">slow2</span><span class="p">?.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">slow2</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="修订记录">修订记录</h2>
+<h3 id="2022-05-10t1642470800">2022-05-10T16:42:47+08:00</h3>
+<ul>
+<li>创建。</li>
+</ul>
+</kb:content>
+        </main>
+        <footer>
+        <section>
+    <h2>相关内容</h2>
+    
+    <kb:topic>
+        <h3>环形链表</h3>
+        <ul>
+        
+            
+            
+                
+                    <li>
+    <p><i class="far fa-file-alt content-type"></i><a href="./leetcode141.html">141【简单】环形链表 I</a>
+    </p>
+    <p>给定一个单链表头节点，判断是否有环。</p>
+</li>
+                
+            
+        
+        </ul>
+    </kb:topic>
+    
+</section><section class="info"><p>© 2022 杨林青</p></section>
+        <script src='./title.js'></script>
+        <script src='./mermaid/min.js'></script>
+        <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose', theme: 'neutral'});</script>
+        
+            <script src='./completeTOC.js'></script>
+        </footer>
+    </body>
+</html>
