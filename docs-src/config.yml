@@ -1,0 +1,9 @@
+baseURL      : "https://example.org/"
+languageCode : zh-cn
+title        : LeetCode 笔记
+theme        : CardBox
+
+markup:
+  _merge: deep
+relativeURLs: true  # 使所有URL相对于当前页面，适用于可能有路径前缀的站点。
+uglyurls    : true # 在文件系统或者tomcat中需要设为真，在nginx等一般服务器中可以设为假。
